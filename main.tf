@@ -2,8 +2,8 @@ data "aws_ami" "amazonlinux" {
   most_recent = true
 
   filter {
-    name   = "image-id"
-    values = ["ami-0bd39c806c2335b9"]
+    name   = "name"
+    values = [var.image-name]
   }
 
   filter {
@@ -11,7 +11,7 @@ data "aws_ami" "amazonlinux" {
     values = ["hvm"]
   }
 
-  owners = ["amazon"]
+  owners = ["self"]
 }
 
 resource "aws_instance" "web" {
