@@ -10,8 +10,8 @@
         "s3:PutObject"
       ],
       "Resource": [
-        "${aws_s3_bucket.codepipeline_bucket.arn}",
-        "${aws_s3_bucket.codepipeline_bucket.arn}/*"
+        "${TF_BUCKET}",
+        "${TF_BUCKET}/*"
       ]
     },
     {
